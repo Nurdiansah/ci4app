@@ -17,16 +17,28 @@ class Klub extends BaseController
 
     public function index()
     {
-        $klub = $this->klubModel->findAll();
+        // $klub = $this->klubModel->findAll();
+
 
         $data = [
             'title' => 'CM | Klub',
-            'klub' => $klub
-
+            'klub' => $this->klubModel->getKlub()
         ];
 
 
         return view('klub/index', $data);
+    }
+
+    public function detail($id)
+    {
+        $id = base64_decode($id);
+        $klub = $this->klubModel->getKlub($id);
+        $data = [
+            'title' => 'Detail Klub',
+            'klub' => $klub
+        ];
+
+        return view('klub/detail', $data);
     }
 
 

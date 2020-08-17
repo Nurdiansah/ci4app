@@ -12,4 +12,12 @@ class KlubModel extends Model
 
     // protected $allowedFields = ['name', 'email'];
 
+    public function getKlub($id = false)
+    {
+        if ($id == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['id_klub' => $id])->first();
+    }
 }

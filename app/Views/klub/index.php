@@ -23,7 +23,7 @@
                             <th scope="row"><?= $i++ ?></th>
                             <td><img src="/img/klub/logo/<?= $k['logo']; ?>" alt="logo chelsea" srcset="" class="sampul"></td>
                             <td><?= $k['nm_klub']; ?></td>
-                            <td><a href=""><button type="button" class="btn btn-primary">Detail</button></a></td>
+                            <td><a href="/klub/<?= base64_encode($k['id_klub']); ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
