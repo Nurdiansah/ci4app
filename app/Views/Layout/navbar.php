@@ -16,6 +16,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Pages/contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Klub">Klub</a>
+                </li>
             </ul>
         </div>
     </div>
